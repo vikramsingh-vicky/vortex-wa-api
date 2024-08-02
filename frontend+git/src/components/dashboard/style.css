@@ -1,0 +1,225 @@
+.app {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+}
+.dropdown-menu{
+  --bs-dropdown-bg: white;
+}
+.modal{
+  --bs-modal-bg: white;
+}
+.lable{
+  color:rgb(235, 153, 2) !important;
+  font-size: larger;
+  background-color:transparent !important;
+  /* text-align: center !important; */
+  transform: translateY(100%) !important;
+  display: flex !important;
+  /* margin-left: 35%; */
+  justify-content: center !important;
+  margin-bottom: 5% !important;
+}
+.input-company{
+  border-radius:1rem !important;
+  background-color:transparent !important;
+  color:black !important;
+  min-height: 2rem !important;
+  font-size: 1.3rem !important;
+  border-top: none !important;
+  outline: transparent !important;
+  /* --bs-border-color:white;  */
+  /* --bs-box-shadow: white;    */   
+}
+.side-nav {
+  /* position:fixed; */
+  width: 65px;
+  background: black;
+  transition: margin-left 1.0s ease, width 0.6s ease;
+  overflow-y: hidden;
+  justify-content: left;
+  box-shadow: 0px 0px 8px 4px #4e4d4e;
+  min-height: 93vh;
+  max-height: fit-content;
+  color: white;
+  margin-top: 0.1%;
+  bottom: 0px;
+  /* z-index: 100; */
+  align-items: left !important;
+}
+
+.side-nav-open {
+  width: 250px;
+  transition: margin-left 1.0s ease, width 0.6s ease;
+  background: black;
+  overflow-y: hidden;
+  justify-content: left;
+  box-shadow: 0px 0px 8px 4px #4e4d4e;
+  min-height: 93vh;
+  max-height: fit-content;
+  color: white;
+  margin-top: 0.1%;
+  bottom: 0px;
+  align-items: left !important;
+}
+
+.side-nav-frozen{
+  /* z-index: -10; */
+  position: fixed;
+}
+/* Style sidebar links */
+.side-nav a,
+.side-nav-open a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.side-nav a:hover,
+.side-nav-open a:hover {
+  color: goldenrod;
+}
+.fade{
+  transition: ease-in-out 0.6s ease;
+}
+
+.tn-icon-pack{
+  font-size: 2rem;
+  height: 35px;
+  width: 35px;
+  margin-right: 20px;
+  color: white;
+  background-color: black;
+  /* border-color: aqua;
+  border: solid 2px;
+  border-radius: 50%; */
+  cursor:pointer;
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-grow: 1;
+  transition: width 0.3s ease; 
+  
+}
+.main-content-frozen-open {
+  flex: 1;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 260px;
+  flex-grow: 1;
+  transition: width 0.3s ease; 
+  
+}
+.main-content-frozen-close {
+  flex: 1;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 75px;
+  flex-grow: 1;
+  transition: width 0.3s ease; 
+  
+}
+.top-nav {
+  background-color: black;
+  top: 10%;
+  box-shadow: 0 4px 8px 4px #4e4d4e;
+  color: white;
+  padding: 10px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  z-index: -1;
+  vertical-align: middle;
+}
+
+button {
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+/* Style the sidebar - fixed full height */
+
+
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .side-nav {padding-top: 15px;}
+  .side-nav a {font-size: 18px;}
+}
+
+
+/* Freeze TopNav when scrolling */
+.top-nav.frozen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust z-index as needed */
+}
+
+/* Adjust main content width when TopNav is frozen */
+.top-nav.frozen + .content {
+  padding-top: 60px; 
+}
+
+.cards{
+  
+  color: black;
+  transition: 0.5s ease-in;
+
+}
+.cards:hover{
+ 
+  color: black;
+  transform: scale(1.07);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.295);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.pagination button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: black;
+}
+
+.pagination button.active {
+  background: #f6fafd;
+  color: black;
+  border-color: #007bff;
+}
+
+.pagination button:disabled {
+  background: #ebebf7;
+  cursor: not-allowed;
+  color: black;
+}
+
+

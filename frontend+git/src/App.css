@@ -1,0 +1,489 @@
+
+:root {
+  --BG-size: cover;
+  --BG-color: none;
+  --BG-image: none;
+  --BG-repeat: no-repeat;
+  --BG-position: center;
+  --BG-attachment: scroll;
+  --IMG-width: 200px;
+  --IMG-padding: 25%;
+  --IMG-ratio: 1;
+  --bs-body-bg: none;
+  --bs-border-color: none;
+  --bs-modal-bg: white;
+  /* --IMG-backgroundColor: #FFF;  */
+}
+/* .App {
+  text-align: center;
+} */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+  font-family: 'work sans';
+  font-size: medium;
+}
+/* .App{
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+} */
+.log{
+  align-content: right;
+  text-align:right;
+  justify-content:right;
+}
+.flog{
+  align-content: right;
+  text-align:right;
+  justify-content:right;
+}
+.fcopy{
+  display: block;
+}
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px
+}
+.bg {
+  font-family: 'Work Sans' sans-serif;
+  min-height: 92.5vh;
+  font-size: larger;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-size: 120vh;
+  background-position: center;
+  padding-bottom: 0%;
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh;
+  /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* needed to keep in the background */
+  background-color: var(--BG-color);
+  background-image: var(--BG-image);
+  background-repeat: var(--BG-repeat);
+  background-position: var(--BG-position);
+  background-attachment: scroll;
+  -webkit-background-size: var(--BG-size);
+  -moz-background-size: var(--BG-size);
+  -o-background-size: var(--BG-size);
+  background-size: var(--BG-size);
+}
+
+body.intro {
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='735' height='735' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2327C0C1' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFA12E'%3E%3Ccircle cx='769' cy='229' r='11'/%3E%3Ccircle cx='539' cy='269' r='11'/%3E%3Ccircle cx='603' cy='493' r='11'/%3E%3Ccircle cx='731' cy='737' r='11'/%3E%3Ccircle cx='520' cy='660' r='11'/%3E%3Ccircle cx='309' cy='538' r='11'/%3E%3Ccircle cx='295' cy='764' r='11'/%3E%3Ccircle cx='40' cy='599' r='11'/%3E%3Ccircle cx='102' cy='382' r='11'/%3E%3Ccircle cx='127' cy='80' r='11'/%3E%3Ccircle cx='370' cy='105' r='11'/%3E%3Ccircle cx='578' cy='42' r='11'/%3E%3Ccircle cx='237' cy='261' r='11'/%3E%3Ccircle cx='390' cy='382' r='11'/%3E%3C/g%3E%3C/svg%3E"); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.bg-dark {
+  font-family: 'Work Sans' sans-serif;
+  font-size: larger;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #696969;
+  min-height: 92.5vh;
+  /* background-color: #69696900; */
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23696969'/%3E%3Cstop offset='1' stop-color='%230E3632'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E"); */
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 0%;
+}
+
+.wave {
+  /* background: rgba(5, 96, 102, 0.25); */
+  background: rgba(127, 160, 231, 0.719);
+  border-radius: 1000% 1000% 0% 0%;
+  position: fixed;
+  width: 100%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.3;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.3;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s linear reverse infinite;
+  opacity: 0.4;
+}
+
+.wave:nth-of-type(4) {
+  bottom: -3.0em;
+  animation: wave 22s -1s linear reverse infinite;
+  opacity: 0.4;
+}
+
+@keyframes wave {
+  2% {
+    transform: translate(1, 1);
+  }
+
+  20% {
+    transform: translate(-20%, 50%);
+    /*         transform: translateY(50%); */
+  }
+
+  40% {
+    transform: translate(0%, 30%);
+    /*         transform: translateY(30%); */
+  }
+
+  60% {
+    transform: translate(10%, 10%);
+    /*         transform: translateY(10%); */
+  }
+
+  80% {
+    transform: translate(20%, 0%);
+    /*         transform: translateY(0%); */
+  }
+
+  100% {
+    transform: translate(1, 1);
+  }
+}
+.vl-sideNav{
+  width: 65px;
+    transition: margin-left 1.0s ease, width 0.6s ease;
+    border-left: 2px solid gold;
+    height: 50px;
+    position: Relative;
+    margin-left: 3px;
+}
+
+.contact-widget {
+  position: fixed;
+  bottom: 45vh;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  /* Ensure the widget is above other elements */
+}
+
+@media (max-width: 456px) {
+  .contact-widget {
+    position: fixed;
+    /* bottom: 45vh; */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+    transform: translateY(45vh);
+    /* Ensure the widget is above other elements */
+  }
+  .log{
+    align-content: left;
+    text-align:left;
+    justify-content:left;
+    justify-items: left;
+    /* margin-left: 10%; */
+  }
+  .section {
+    /* margin: 0% -10% 0 -10%; */
+    padding: 8%;
+  }
+
+  .section-dark {
+    /* margin: 0% -10% 0 -10%; */
+    padding: 8%;
+  }
+
+  .flog {
+    align-content: center;
+    text-align:center;
+    justify-content:center;
+    justify-items: center;
+  }
+  .fcopy{
+    display: none;
+  }
+  .fa-user {
+    display: none;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-header {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-top: 0%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #700567;
+  }
+
+  .content-header-dark {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #F09F33;
+  }
+
+  .vl {
+    display: none;
+  }
+
+}
+
+.whatsapp-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Add some spacing between the buttons */
+}
+
+.whatsapp-widget img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.call-now-link {
+  display: inline-block;
+  /* Ensure the image behaves like a link */
+  margin-bottom: 10px;
+  /* Add some spacing between the buttons */
+}
+
+.call-now-link img {
+  width: 50px;
+  /* Adjust the width of the "Call Now" image as needed */
+  height: 50px;
+  /* Adjust the height of the "Call Now" image as needed */
+  border-radius: 50%;
+}
+
+.section {
+  min-height: 400px;
+  margin: 0% -3% 0 -3%;
+  background-repeat: no-repeat;
+  background-size: 100% 50px, 100% 50px, 100%;
+  background-position: top center, bottom center, 100%;
+  background: linear-gradient(#3c8a9856, #FFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-dark {
+  min-height: 400px;
+  margin: 0 -1% 0 -1%;
+  background-repeat: no-repeat;
+  background-size: 100% 50px, 100% 50px, 100%;
+  background-position: top center, bottom center, 100%;
+  background: linear-gradient(#40424256, #2c2a2a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-cap {
+  grid-column: 1/-1;
+  padding: 0;
+  height: 100px;
+  margin: 2% -10% 0 -10%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100' preserveAspectRatio='none' viewBox='0 0 1600 130'%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='70' x2='1600' y2='70'%3E%3Cstop offset='0' stop-color='%23808'/%3E%3Cstop offset='.5' stop-color='%23CC3F47'/%3E%3Cstop offset='1' stop-color='%23F09F33'/%3E%3C/linearGradient%3E%3Cpath d='M1600 130L1600 110c-400 0-400-100-800-100S400 110 0 110L0 130z' fill='none'/%3E%3Cpath d='M1600 120c-400 0-400-100-800-100S400 120 0 120' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  background-position: bottom center;
+}
+
+.start-cap-dark {
+  grid-column: 1/-1;
+  padding: 0;
+  height: 100px;
+  margin: 2% -10% 0 -10%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100' preserveAspectRatio='none' viewBox='0 0 1600 130'%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='70' x2='1600' y2='70'%3E%3Cstop offset='0' stop-color='%23E9E1D9'/%3E%3Cstop offset='.5' stop-color='%23C375F5'/%3E%3Cstop offset='1' stop-color='%23E9E1D9'/%3E%3C/linearGradient%3E%3Cpath d='M1600 130L1600 110c-400 0-400-100-800-100S400 110 0 110L0 130z' fill='none'/%3E%3Cpath d='M1600 120c-400 0-400-100-800-100S400 120 0 120' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  background-position: bottom center;
+}
+
+
+
+@media (max-width: 456px) {
+  .start-cap {
+    margin: 20% -10% 0 -10%;
+  }
+  .start-cap-dark {
+    margin: 20% -10% 0 -10%;
+  }
+  .end-cap {
+    margin: 0% -10% 5% -10%;
+  }
+  .end-cap-dark {
+    margin: 0% -10% 5% -10%;
+  }
+}
+
+.end-cap {
+  grid-column: 1/-1;
+  padding: 0;
+  height: 100px;
+  margin: -0.5% -10% 5% -10%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100' preserveAspectRatio='none' viewBox='0 0 1600 130'%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='70' x2='1600' y2='70'%3E%3Cstop offset='0' stop-color='%23808'/%3E%3Cstop offset='.5' stop-color='%23CC3F47'/%3E%3Cstop offset='1' stop-color='%23F09F33'/%3E%3C/linearGradient%3E%3Cpath d='M1600 130L1600 110c-400 0-400-100-800-100S400 110 0 110L0 130z' fill='none'/%3E%3Cpath d='M1600 120c-400 0-400-100-800-100S400 120 0 120' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  background-position: bottom center;
+  transform: rotate(180deg);
+  z-index: 0;
+}
+
+.end-cap-dark {
+  grid-column: 1/-1;
+  padding: 0;
+  height: 100px;
+  margin: -0.5% -10% 5% -10%;
+  /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="100" viewBox="0 0 1600 130"><path d="M0 0h1600v110c-400 0-400-100-800-100S400 110 0 110V0z" fill="none"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="70" x2="1600" y2="70"><stop offset="0" stop-color="%23E9E1D9"/><stop offset=".5" stop-color="%23C375F5"/><stop offset="1" stop-color="%23E9E1D9"/></linearGradient><path d="M1600 120c-400 0-400-100-800-100S400 120 0 120" fill="%232c2a2a" stroke="url(%23g)" stroke-width="5"/></svg>'); */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100' preserveAspectRatio='none' viewBox='0 0 1600 130'%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='70' x2='1600' y2='70'%3E%3Cstop offset='0' stop-color='%23E9E1D9'/%3E%3Cstop offset='.5' stop-color='%23C375F5'/%3E%3Cstop offset='1' stop-color='%23E9E1D9'/%3E%3C/linearGradient%3E%3Cpath d='M1600 130L1600 110c-400 0-400-100-800-100S400 110 0 110L0 130z' fill='none'/%3E%3Cpath d='M1600 120c-400 0-400-100-800-100S400 120 0 120' fill='none' stroke='url(%23g)' stroke-width='5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  background-position: bottom center;
+  transform: rotate(180deg);
+}
+
+.content-header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 2%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #700567;
+}
+
+.content-header-dark {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 2%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #F09F33;
+}
+
+.progress-container {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  align-items: center;
+}
+
+.progress-chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the progress circle */
+.progress-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #ddd;
+  /* Outer circle color */
+  border-top-color: #042d47;
+  /* Progress color */
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+/* Style for the progress text */
+.progress-text {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e90a0a;
+  background: conic-gradient(#2D5F00 3.6deg, #fff 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.progress-text::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.count {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
